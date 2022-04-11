@@ -1,4 +1,4 @@
-# nShape
+# nShape-fitness-app
 
 <h2>What is it?</h2> 
 <br>Fitness app that will help users keep track of workouts.
