@@ -79,15 +79,6 @@ color:lightcoral;
  font-size:17px;
 
 }
-.jotform-icon{
-  background-image:url("https://files.startupranking.com/startup/thumb/37832_dd0dcdb7463391d8ee4a9b7468e9f5aa930e359e_jotform_m.png");
-  background-repeat:no-repeat;
-  background-size:cover;
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  margin-bottom:70px;
-}
 .button{
   padding:12px 17px;
   border-radius:5px;
@@ -99,6 +90,7 @@ color:lightcoral;
   letter-spacing:0.5px;
   margin-top:5px;
 }
+
 footer {
   font-size: 16px;
   background: var(--footer-bg);
@@ -189,35 +181,6 @@ footer ul {
   font-size: 1em;
   color: var(--color);
   font-weight: 500;
-}
-
-.social-media {
-  flex-direction: column;
-}
-
-.social-media-list {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.social-media-list a {
-  padding: 0.5em;
-  color: var(--color-smooth);
-  display: flex;
-  border-radius: 0.3em;
-  transition: all 0.25s ease 0s;
-}
-
-.social-media-list a:hover,
-.social-media-list a:focus {
-  color: var(--color);
-  background: #ffffff1a;
-}
-
-.social-media-list svg {
-  width: 1.5em;
-  height: 1.5em;
-  transition: all 0.25s ease 0s;
 }
 
 @media screen and (max-width: 750px) {
