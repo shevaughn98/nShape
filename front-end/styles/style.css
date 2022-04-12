@@ -1,3 +1,13 @@
+:root {
+  --footer-bg: #060606;
+  --color: #f2f3fb;
+  --color-smooth: #9da2ae;
+  --input-border: #3a456a;
+  --btn-bg-color: #f1f2fc;
+  --btn-hover-bg: #d5d9f6;
+  --btn-color: #1e2641;
+}
+
 *{
     box-sizing: border-box;
     font-family:'Montserrat Alternates', sans-serif;  
@@ -5,13 +15,13 @@
     padding: 0;
 }
 body{
-    background-image:url(/front-end/images/exercise-2.jpeg);
+    background-image:url(/front-end/images/photo-1571902943202-507ec2618e8f.jpg);
     background-repeat:no-repeat;
     background-size:cover;
 }
 .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #060606;
   }
   
   .topnav a {
@@ -27,14 +37,198 @@ body{
     color: black;
   }
   
-h1{
+/* h1{
 display: flex;
 justify-content: center;
 font-size: 80px;
 color:lightcoral;
+} */
+.container{
+  display: flex;
+  margin-top: 100px;
+  max-width:1200px;
+  padding: 0 20px;
+  justify-content:center;
 }
 
-.container-a{
+/* .login{
+  color:white;
+  font-weight:700;
+  font-size:15px;
+  font-family:Sans-serif;
+  text-decoration:none;
+  margin-bottom:70px;
+
+} */
+.title1{
+  color:#ff8001;
+  font-family:'Quicksand',sans-serif;
+  letter-spacing:2px;
+  font-size:14px;
+}
+.title2{
+  color:#817d7d;
+  font-family:'Quicksand',sans-serif;
+  font-size:40px;
+  font-weight:bold;
+}
+.introduce{
+ color:#f99e01;
+ font-family:'Quicksand',sans-serif;
+ line-height: 1.5;
+ font-size:17px;
+
+}
+.jotform-icon{
+  background-image:url("https://files.startupranking.com/startup/thumb/37832_dd0dcdb7463391d8ee4a9b7468e9f5aa930e359e_jotform_m.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  margin-bottom:70px;
+}
+.button{
+  padding:12px 17px;
+  border-radius:5px;
+  border:0;
+  font-family:'Quicksand',sans-serif;
+  font-weight:bold;
+  background-color:rgb(22, 21, 21);
+  font-size:100%;
+  letter-spacing:0.5px;
+  margin-top:5px;
+}
+footer {
+  font-size: 16px;
+  background: var(--footer-bg);
+  padding: 2em 4em;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 1em;
+  font-family: "IBM Plex Sans", sans-serif;
+  margin-top: 75%;
+}
+
+footer ul {
+  list-style: none;
+}
+
+.col {
+  flex: 1;
+}
+
+.col-title {
+  font-family: "Merriweather", serif;
+  color: var(--color);
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 0.5em 0;
+}
+
+.col-list a {
+  color: var(--color-smooth);
+  text-decoration: none;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.col-list a:hover,
+.col-list a:focus {
+  text-decoration: underline;
+}
+
+.subscribe-form,
+.social-media {
+  display: flex;
+  gap: 0.5em;
+  padding: 0.5em 0;
+}
+
+.subscribe-input {
+  width: auto;
+  flex: 1;
+  background: transparent;
+  border: 0.06em solid var(--input-border);
+  font-size: 1em;
+  font-weight: 500;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  transition: all 0.25s ease 0s;
+  display: inline-block;
+  color: var(--color-smooth);
+}
+
+.subscribe-input:focus {
+  outline: none;
+  border-color: var(--color);
+  color: var(--color);
+}
+
+.subscribe-btn {
+  background: var(--btn-bg-color);
+  border: none;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  transition: all 0.25s ease 0s;
+  display: inline-block;
+  color: var(--btn-color);
+  cursor: pointer;
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.form-title,
+.social-col-title {
+  font-size: 1em;
+  color: var(--color);
+  font-weight: 500;
+}
+
+.social-media {
+  flex-direction: column;
+}
+
+.social-media-list {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-media-list a {
+  padding: 0.5em;
+  color: var(--color-smooth);
+  display: flex;
+  border-radius: 0.3em;
+  transition: all 0.25s ease 0s;
+}
+
+.social-media-list a:hover,
+.social-media-list a:focus {
+  color: var(--color);
+  background: #ffffff1a;
+}
+
+.social-media-list svg {
+  width: 1.5em;
+  height: 1.5em;
+  transition: all 0.25s ease 0s;
+}
+
+@media screen and (max-width: 750px) {
+  footer {
+    padding: 2em;
+    flex-direction: column;
+  }
+}
+
+
+/* .container-a{
 display: flex;
 justify-content: center;
 }
@@ -42,9 +236,9 @@ justify-content: center;
 .container-b{
     display: flex;
     justify-content: center;
-    }
+    } */
 
-.box-1 {
+/* .box-1 {
     background-color:lavender;
     width:900px; 
     height: 400px;
@@ -55,4 +249,4 @@ justify-content: center;
     height:200px;
     border:3px solid;
     background-color:lavenderblush;
-}
+} */
