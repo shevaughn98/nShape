@@ -10,6 +10,11 @@ const PORT = 8085;
 // Middleware
 app.use(express.json());
 
+// Default Route
+app.get('/', (req, res) => {
+    res.status(200).json({"message" : "Success, Thank you for using the nShape api"});
+})
+
 // Routers
 const usersRouter = require('./routers/usersRouter');
 const goalsRouter = require('./routers/goalsRouter');
