@@ -9,7 +9,7 @@ const { viewAllUsers, getParticularUser, authenticateUser, createUser, updateUse
 // /users
 router.get('/', viewAllUsers)
 // /users/signin
-.post('/signin', authenticateUser)
+.post('/signin', authenticateUser) // ==> This requires more knowledge, ignore this route for now
 // /users/signup
 .post('/signup', createUser)
  

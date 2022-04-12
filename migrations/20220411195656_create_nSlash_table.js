@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-  return knex.schema.createTable('Users', table => {
+  return knex.schema.createTable('users', table => {
       table.increments('user_id');
       table.string('username').notNullable();
       table.string('password').notNullable();
@@ -16,15 +16,15 @@ exports.up = function(knex) {
       table.foreign('workouts_id').references('workouts_id');
       table.foreign('goals_id').references('goals_id');
   })
-    .createTable('Workouts', table => {
+    .createTable('workouts', table => {
         table.increments('workouts_id');
-        table.string('workout_type').notNullable();
-        table.string('workout_name').notNullable();
+        table.string('type').notNullable();
+        table.string('name').notNullable();
         table.integer('reps').notNullable();
-        table.integer('number_per_reps').notNullable();
-        table.string('youtube_link').notNullable();
+        table.integer('repsrepetition').notNullable();
+        table.string('video').notNullable();
     })
-    .createTable('Goals', table => {
+    .createTable('goals', table => {
         table.increments('goals_id');
         table.string('title').notNullable();
         table.string('description').notNullable();
@@ -37,5 +37,5 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-  return knex.schema.dropTable('Users').dropTable('Workouts').dropTable('Goals')
+  return knex.schema.dropTable('users').dropTable('workouts').dropTable('goals')
 };
