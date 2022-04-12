@@ -3,7 +3,7 @@
  * @returns { Promise<void> } 
  */
 exports.seed = async function(knex) {
-  // Deletes ALL existing entries
+  // Populate the Workouts table
   await knex('Workouts').del()
   await knex('Workouts').insert([
     // Arm
@@ -28,12 +28,14 @@ exports.seed = async function(knex) {
     {workout_type: 'Legs', workout_name: 'Side-Lying Leg Lift Right', reps: 2, number_per_reps: 10, youtube_link: "https://www.youtube.com/watch?v=jgh6sGwtTwk"}
   ]);
 
+  // Populate the Users table
   await knex('Users').del()  
   await knex('Users').insert([
     {birthday: '2008-11-11', email: "example@gmail.com", gender: 'male', height: 180.34, name: 'John Doe', password: 'password', username: "Example_User", weight: 135},
     {birthday: '2008-11-11', email: "example@gmail.com", gender: 'female', height: 180.34, name: 'Mary Jane', password: 'password', username: "Example_User", weight: 135}
   ]);
 
+  // Populate the Goals table
   await knex('Goals').del()  
   await knex('Goals').insert([
     {title: 'Running', description: 'Run 3 laps around the park'}, {title: 'Food', description: 'Eat homemade food for a week'}, {title: 'Possibility', description: 'Try a new diet out'}, {title: 'Nature', description: 'Camp out in the woods for three nights'}

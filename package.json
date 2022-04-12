@@ -1,0 +1,27 @@
+{
+  "name": "nShape",
+  "version": "1.0.0",
+  "description": "**What is it?**  <br>Fitness app that will help users keep track of workouts. <br>Fullstack application with an HTML/CSS Front-end and a Node/Express Back-end connected to a Postgres Database.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annecie/nShape.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annecie/nShape/issues"
+  },
+  "homepage": "https://github.com/annecie/nShape#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "knex": "^1.0.4",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3"
+  }
+}
