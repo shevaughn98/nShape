@@ -1,6 +1,9 @@
 // Router Creation
 const express = require('express');
+const cors = require('cors')
 const router = express.Router();
+
+router.use(cors());
 
 // Importing Controller
 const { viewAllWorkouts, viewAllArmWorkouts, viewAllAbWorkouts, viewAllFullBodyWorkouts, viewAllLegWorkouts } = require('../controllers/workoutsController')
