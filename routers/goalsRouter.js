@@ -1,6 +1,9 @@
 // Router Creation
 const express = require('express');
 const router = express.Router();
+const cors = require('cors');
+
+router.use(cors());
 
 // Importing Controller
 const { viewAllGoals, createGoal, viewParticularGoal, updateGoalInformation, deleteGoal, markGoalAsCompleted } = require('../controllers/goalsController')

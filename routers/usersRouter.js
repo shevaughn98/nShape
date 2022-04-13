@@ -1,6 +1,9 @@
 // Router Creation
 const express = require('express');
 const router = express.Router();
+const cors = require('cors');
+
+router.use(cors());
 
 // Importing Controller
 const { viewAllUsers, getParticularUser, authenticateUser, createUser, updateUserInfo } = require('../controllers/usersController')
