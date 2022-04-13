@@ -1,16 +1,36 @@
+       *{
+		background-color: #efefef;
+	   }
 
+	   .topnav {
+		overflow: hidden;
+		border: 10px;;
+	  }
+	  
+	  .topnav a {
+		float: left;
+		color: #8c0c3c;
+		text-align: center;
+		padding: 14px 16px;
+		font-size: 17px;
+	  }
+	  
+	  .topnav a:hover {
+		background-color: #8c0c3c;
+		color: black;
+	  }
+
+	  #img-1{
+		width:35%;  
+	  }
+	  
 		
 		.title{
 		font-size:2em;
-		color:#8c0c60;
+		color:#8c0c3c;
 		display:block;
 		}
 		
-		.sub-title{
-		font-size:0.8em;
-		color:gray;
-		display:block;
-		}
 		
 		.btn1{
 		padding:10px 20px;

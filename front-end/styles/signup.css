@@ -1,3 +1,21 @@
+ .left{
+     position:relative;
+    right:680px;
+    bottom:450px;
+ }
+ 
+ .topnav a {
+    color: #f2f2f2;
+    padding: 14px 16px;
+    font-size: 17px;
+    text-align:top;
+  }
+
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
 body {
     display: flex;
     justify-content: center;
@@ -9,23 +27,24 @@ body {
 }
 
 .card {
+    position: relative;
+    right: 120px;
     border-radius: 10px;
     padding: 35px 26px;
     width: 400px
 }
 
 .abt {
-    font-size: 14px
+    font-size: 20px
 }
 
 .inputbox {
-    margin-top: 12px;
+    margin-top: 20px;
     position: relative
 }
 
 .inputbox input {
     border: 2px solid #eee;
-    padding: 0 10px
 }
 
 .inputbox input:focus {
