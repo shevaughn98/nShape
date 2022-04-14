@@ -1,5 +1,12 @@
-       *{
-		background-color: #efefef;
+       body{
+		/* background-color: #efefef; */
+		background-image:url(images/fitness-pic.jpeg);
+		background-repeat: no-repeat;
+		background-size:cover;
+	   }
+
+	   h3{
+		color:bisque;
 	   }
 
 	   .topnav {
@@ -19,11 +26,6 @@
 		background-color: #8c0c3c;
 		color: black;
 	  }
-
-	  #img-1{
-		width:35%;  
-	  }
-	  
 		
 		.title{
 		font-size:2em;
@@ -50,8 +52,8 @@
 		.btn2{
 		padding:10px 20px;
 		border-radius:3px;
-		background:#1e1e1e;
-		border:1px solid #1e1e1e;
+		/* background:#1e1e1e; */
+		/* border:1px solid #1e1e1e; */
 		color:#fff;
 		outline:none;
 		transition:0.5s;
@@ -92,7 +94,7 @@
 		height:70%;
 		margin-left:auto;
 		margin-right:auto;
-		box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5);
+		/* box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5); */
 		}
 		
 		.section3 table td img{
