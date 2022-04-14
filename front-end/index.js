@@ -3,14 +3,6 @@ const dumbellBtn = document.querySelector('#dumbbell-btn');
 const workoutList = document.querySelector('#workout-container');
 const wrapper = document.querySelector('#wrapper');
 
-const arms = document.querySelector('#arms');
-const abs = document.querySelector('#abs');
-const fullbody = document.querySelector('#fullbody');
-const legs = document.querySelector('#legs');
-
-const modalContent = document.querySelector('#modal-content');
-
-
 dumbellBtn.addEventListener('click', handleClick);
 // barsBtn.addEventListener('click', handleClick);
 
@@ -98,23 +90,7 @@ function displaySelectedWorkoutInfo(data) {
 
 }
 
-
-
-// Modal
-const modal = document.querySelector(".modal");
-const trigger = document.querySelector(".trigger");
-const closeButton = document.querySelector(".close-button");
-
-function toggleModal() {
-    modal.classList.toggle("show-modal");
+module.exports = {
+    selectedWorkout,
+    displaySelectedWorkoutInfo
 }
-
-function windowOnClick(event) {
-    if (event.target === modal) {
-        toggleModal();
-    }
-}
-
-trigger.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
