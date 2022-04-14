@@ -46,7 +46,9 @@ body, html {
     flex: 33.33%;
     padding: 5px;
   }
- 
+ .subheading{
+   text-align: center;
+ }
   .bgimg-1, .bgimg-2, .bgimg-3 {
     position: relative;
     opacity: 0.65;
