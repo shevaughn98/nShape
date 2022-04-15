@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./modal.css">
+</head>
+
+<body>
+    <h1>Hello, world!</h1>
+
+    <div class="workout-container" id="workout-container">
+        <h3>Select Your Type of Workout</h3>
+        <ul class="type-list">
+            <!-- Arm Modal -->
+            <li class="type"><button id="trigger1" class="arms" value="arms">Arm</button>
+                <div class="modal" id="modal1">
+                    <div class="modal-content" id="modal-content-1">
+                        <span class="close-button" id="close-button1">&times;</span>
+                    </div>
+                </div>
+            </li>
+            <!-- Abs Modal -->
+            <li class="type"><button id="trigger2" class="abs" value="abs">Abs</button>
+                <div class="modal" id="modal2">
+                    <div class="modal-content" id="modal-content-2">
+                        <span class="close-button" id="close-button2">&times;</span>
+                    </div>
+                </div>
+            </li>
+            <!-- Full Body Modal -->
+            <li class="type"><button id="trigger3" class="fullbody" value="fullbody">Full Body</button>
+                <div class="modal" id="modal3">
+                    <div class="modal-content" id="modal-content-3">
+                        <span class="close-button" id="close-button3">&times;</span>
+                    </div>
+                </div>
+            </li>
+            <!-- Legs Modal -->
+            <li class="type"><button id="trigger4" class="legs" value="legs">Legs</button>
+                <div class="modal" id="modal4">
+                    <div class="modal-content" id="modal-content-4">
+                        <span class="close-button" id="close-button4">&times;</span>
+                    </div>
+                </div>
+            </li>
+            <!--  -->
+        </ul>
+    </div>
+
+
+    <script src="./workout.js"></script>
+</body>
+
+</html>
