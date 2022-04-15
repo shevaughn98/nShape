@@ -1,12 +1,19 @@
+
 body, html {
     height: 100%;
     margin: 0;
     font: 400 15px/1.8 "Lato", sans-serif;
     color: #777;
   }
-  .topnav {
+.nav-bar{
+display: flex;
+}
+
+.topnav {
+    width: 100%;
     overflow: hidden;
     background-color: #060606;
+    margin: 0;
   }
   
   .topnav a {
@@ -14,6 +21,7 @@ body, html {
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
+    margin-top: 20px;
     font-size: 17px;
   }
   
@@ -28,6 +36,7 @@ body, html {
     padding:50px 80px;
     text-align: justify;
   }
+  /* the arrow next to our motto */
   .row {
     display: flex;
   }
@@ -41,7 +50,9 @@ body, html {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
-  /* Create three equal columns that sits next to each other */
+
+
+  /* Create three equal columns for pictures that sits next to each other */
   .column {
     flex: 33.33%;
     padding: 5px;
@@ -61,6 +72,8 @@ body, html {
   .anneciePic{
     height: 80%;
   }
+
+  /* parralax images */
   .bgimg-1 {
     background-image: url("/front-end/images/what-is-the-best-5-day-workout-split-header-960x540.jpg");
     min-height: 100%;
