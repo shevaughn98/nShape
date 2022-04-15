@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/battenberg-and-custard?styles=28058');
+
 .modal {
     position: fixed;
     left: 0;
@@ -16,7 +18,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: #c1c0c0;
     padding: 1rem 1.5rem;
     width: 24rem;
     border-radius: 0.5rem;
@@ -41,4 +43,71 @@
     visibility: visible;
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.35em;
+}
+
+
+
+
+ul.topnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    max-width: -webkit-fill-available;
+    justify-content: space-around;
+}
+
+
+li {
+    list-style: none;
+}
+
+.workout-container {
+    border: 1px solid;
+    max-width: -webkit-fill-available;
+    display: grid;
+    border-radius: 22px;
+    justify-content: center;
+    margin-top: 154px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    font-style: italic;
+}
+
+.modal-btn {
+    border: transparent;
+    padding: 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: 'Battenberg and Custard', sans-serif;
+    letter-spacing: 0.5em;
+    margin-right: 50px;
+    font-weight: 900;
+}
+
+.modal-btn:hover {
+    border: 1px solid black;
+    font-style: italic;
+    background-color: wheat;
+}
+
+ul.type-list {
+    display: flex;
+}
+
+h3.workout-heading {
+    text-align: center;
+    font-size: 1.5em;
+    font-style: oblique;
 }
