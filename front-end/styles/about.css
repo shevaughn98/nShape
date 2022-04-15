@@ -1,0 +1,250 @@
+       body{
+		/* background-color: #efefef; */
+		background-repeat: no-repeat;
+		background-size:cover;
+	   }
+	   *{
+		box-sizing: border-box;
+		font-family:'Montserrat Alternates', sans-serif;  
+		margin: 0;
+		padding: 0;
+	}
+	:root {
+		--footer-bg: #060606;
+		--color: #f2f3fb;
+		--color-smooth: #9da2ae;
+		--input-border: #3a456a;
+		--btn-bg-color: #f1f2fc;
+		--btn-hover-bg: #d5d9f6;
+		--btn-color: #1e2641;
+	  }
+	  
+
+	   h3{
+		color:bisque;
+	   }
+
+	   .nav-bar{
+		display: flex;
+		}
+		
+		.topnav {
+			width: 100%;
+			overflow: hidden;
+			background-color: #060606;
+			margin: 0;
+		  }
+		  
+		  .topnav a {
+			float: left;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			margin-top: 20px;
+			font-size: 17px;
+		  }
+		  
+		  .topnav a:hover {
+			background-color: #ddd;
+			color: black;
+		  }
+		.title{
+		font-size:2em;
+		color:#8c0c3c;
+		display:block;
+		}
+		
+		
+		.btn1{
+		padding:10px 20px;
+		background:transparent;
+		border:1px solid #8c0c3c;
+		color:#8c0c3c;
+		border-radius:3px;
+		outline:none;
+		transition:0.5s;
+		}
+		
+		.btn1:hover{
+		background:#8c0c3c;
+		color:#fff;
+		}
+		
+		.btn2{
+		padding:10px 20px;
+		border-radius:3px;
+		/* background:#1e1e1e; */
+		/* border:1px solid #1e1e1e; */
+		color:#fff;
+		outline:none;
+		transition:0.5s;
+		}
+		
+		.btn2:hover{
+		background:transparent;
+		color:#1e1e1e;
+		}
+		
+		.title:before{
+		content:" ";
+		font-family:"FontAwesome";
+		font-size:30px;
+		}
+		
+		a{
+		text-decoration:none;
+		}
+		
+		.section2,.section3{
+		width:90%;
+		margin:5% 0%;
+		margin-left:auto;
+		margin-right:auto;
+		}
+		
+		.section2 table,.section3 table{
+		width:100%;
+		}
+		
+		.section2 table td,.section3 table td{
+		width:50%;
+		}
+		
+		.section2 table td img,.section3 table td img{
+		width:80%;
+		height:70%;
+		margin-left:auto;
+		margin-right:auto;
+		/* box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5); */
+		}
+		
+		.section3 table td img{
+		float:right;
+		}
+		
+		
+		@media (max-width:720px){
+		.section2 table td, .section3 table td{
+		width:100%;
+		display:block;
+		}
+		.section3 table td img{
+		float:none;
+		margin-top:4%;
+		}
+		.section2 table td img,.section3 table td img{
+		width:100%;
+		height:60%;
+		}
+	}
+
+@media (max-width:300px){
+  .section2,.section3{
+    font-size:12px;
+  }
+  .section3 table td img{
+		float:none;
+		margin-top:8%;
+		}
+  .btn1,.btn2{
+    padding:5px 10px;
+  }
+}
+footer {
+	font-size: 16px;
+	background: var(--footer-bg);
+	padding: 2em 4em;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	gap: 1em;
+	font-family: "IBM Plex Sans", sans-serif;
+	margin-top: 75%;
+  }
+  
+  footer ul {
+	list-style: none;
+  }
+  
+  .col {
+	flex: 1;
+  }
+  
+  .col-title {
+	font-family: "Merriweather", serif;
+	color: var(--color);
+	font-size: 1.1em;
+	font-weight: 500;
+	padding: 0.5em 0;
+  }
+  
+  .col-list a {
+	color: var(--color-smooth);
+	text-decoration: none;
+	line-height: 1.4;
+	font-weight: 400;
+  }
+  
+  .col-list a:hover,
+  .col-list a:focus {
+	text-decoration: underline;
+  }
+  
+  .subscribe-form,
+  .social-media {
+	display: flex;
+	gap: 0.5em;
+	padding: 0.5em 0;
+  }
+  
+  .subscribe-input {
+	width: auto;
+	flex: 1;
+	background: transparent;
+	border: 0.06em solid var(--input-border);
+	font-size: 1em;
+	font-weight: 500;
+	padding: 0.5em;
+	border-radius: 0.3em;
+	transition: all 0.25s ease 0s;
+	display: inline-block;
+	color: var(--color-smooth);
+  }
+  
+  .subscribe-input:focus {
+	outline: none;
+	border-color: var(--color);
+	color: var(--color);
+  }
+  
+  .subscribe-btn {
+	background: var(--btn-bg-color);
+	border: none;
+	font-size: 1em;
+	font-weight: 600;
+	padding: 0.5em;
+	border-radius: 0.3em;
+	transition: all 0.25s ease 0s;
+	display: inline-block;
+	color: var(--btn-color);
+	cursor: pointer;
+  }
+  
+  .subscribe-btn:hover,
+  .subscribe-btn:focus {
+	background: var(--btn-hover-bg);
+  }
+  
+  .form-title,
+  .social-col-title {
+	font-size: 1em;
+	color: var(--color);
+	font-weight: 500;
+  }
+  
+  @media screen and (max-width: 750px) {
+	footer {
+	  padding: 2em;
+	  flex-direction: column;
+	}
+  }
