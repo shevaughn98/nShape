@@ -2,6 +2,7 @@
 		/* background-color: #efefef; */
 		background-repeat: no-repeat;
 		background-size:cover;
+		background-image: url(/front-end/images/GettyImages_1132006407.jpg);
 	   }
 	   *{
 		box-sizing: border-box;
@@ -159,7 +160,6 @@ footer {
 	justify-content: center;
 	gap: 1em;
 	font-family: "IBM Plex Sans", sans-serif;
-	margin-top: 75%;
   }
   
   footer ul {
