@@ -71,12 +71,12 @@
   
   /* Style the header */
   .header {
-    background-color: #f44336;
     padding: 30px 40px;
+    background: linear-gradient(178deg, #84c0c6, #46b1c9);
     color: white;
     text-align: center;
     margin-top: 15px;
-  }
+}
   
   /* Clear floats after the header */
   .header:after {
@@ -113,9 +113,13 @@
   
   .addBtn:hover {
     background-color: #bbb;
+    margin-left: 1em;
   }
 
   .input {
     max-width: max-content;
-    border: 1px solid #000;
-  }
+    border: 1px solid #000000;
+    background-color: #96cacf;
+    font-style: oblique;
+    font-weight: 600;
+}

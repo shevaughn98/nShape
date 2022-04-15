@@ -10,13 +10,15 @@ fetch(`http://localhost:8085/goals`)
 const goalsList = document.querySelector('#myUL')
 
 function renderListItem(data) {
+    // Destructing the api data into individual varibales 
     const { goals_id, title, description } = data;
 
+    // Rendering Goal to the website
     const listItem = document.createElement('li');
     listItem.id = goals_id;
     listItem.innerText = `${title}`
+    // Adding a function to the goal
     listItem.onclick = editGoal(description)
-    // console.log(listItem)
     goalsList.append(listItem)
 }
 
@@ -29,9 +31,12 @@ const descriptionInputBox = document.querySelector('#myDescInput')
 addButton.addEventListener('click', createNewGoal)
 
 function createNewGoal(event) {
+    // Getting the value of the input field
     const newTitle = titleInputBox.value;
     const newDescription = descriptionInputBox.value;
    
+    // If either the title or description is missing
+    // the user will be notfied with an alert
     if (newTitle === "" || newDescription === "") {
         alert("Please enter title or description")
         return
@@ -40,6 +45,7 @@ function createNewGoal(event) {
     fetch('http://localhost:8085/goals', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        // Gets the input data, converts into JSON, and sends into the server
         body: JSON.stringify({ title: newTitle, description: newDescription })
     })
         .then(res => res.json())
