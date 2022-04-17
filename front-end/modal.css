@@ -8,6 +8,7 @@ body {
     background-image: url(https://cdn.pixabay.com/photo/2017/08/07/04/22/people-2599796_960_720.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 
 .nav-link {
@@ -86,9 +87,6 @@ h3 {
     text-align: center;
     font-size: 1.35em;
 }
-
-
-
 
 ul.topnav {
     display: flex;

@@ -14,14 +14,14 @@ async function viewAllGoals(req, res) {
 
 // POST
 async function createGoal(req, res) {
-    const { title, description } = req.body;
+    const {description } = req.body;
 
-    if (!title || !description) {
-        return res.status(400).json({ message: 'No title or description was provided' })
+    if (!description) {
+        return res.status(400).json({ message: 'No description was provided' })
     }
 
     try {
-        const newGoal = await Goal.createGoal(title, description)
+        const newGoal = await Goal.createGoal(description)
 
         res.status(201).json(newGoal)
 
@@ -47,7 +47,7 @@ async function viewParticularGoal(req, res) {
 // PUT
 async function updateGoalInformation(req, res) {
     const id = req.params.id
-    const { title, description } = req.body
+    const {description } = req.body
 
     const findGoal = await pool.query(`SELECT * FROM goals WHERE goals_id = $1`, [id]);
 
@@ -55,16 +55,12 @@ async function updateGoalInformation(req, res) {
         return res.status(404).json({ message: 'Goal not found' })
     }
 
-    if (!title) {
-        return res.status(400).json({ message: 'Title is incomplete' })
-    }
-
     if (!description) {
         return res.status(400).json({ message: 'Description is incomplete' })
     }
 
     try {
-        const updateGoalInformation = await Goal.updateGoal(id, description, title)
+        const updateGoalInformation = await Goal.updateGoal(id, description)
 
         res.status(200).json(updateGoalInformation)
     } catch (err) {

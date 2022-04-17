@@ -26,7 +26,6 @@ exports.up = function(knex) {
     })
     .createTable('goals', table => {
         table.increments('goals_id');
-        table.string('title').notNullable();
         table.string('description').notNullable();
         table.boolean('completed').defaultTo(false);
     })

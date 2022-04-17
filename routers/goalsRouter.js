@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const cors = require('cors');
 
+// Middleware
 router.use(cors());
 
 // Importing Controller
