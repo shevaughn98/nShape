@@ -11,20 +11,31 @@ const goalsList = document.querySelector('#myUL')
 
 function renderListItem(data) {
     // Destructing the api data into individual varibales 
-    const { goals_id, title, description } = data;
+    const { goals_id, description, completed } = data;
+    console.log(description)
 
     // Rendering Goal to the website
     const listItem = document.createElement('li');
     listItem.id = goals_id;
-    listItem.innerText = `${title}`
+    listItem.innerText = `${description}`
+    // Check if goal is marked as completed
+    if (completed === true) {
+        listItem.classList.add("checked")
+    }
+    // Trash Icon
+    const trashIcon = document.createElement('i');
+    trashIcon.setAttribute("class", "fa-solid fa-trash")
+    trashIcon.style.marginLeft = "15px";
+    trashIcon.id = goals_id;
+    trashIcon.onclick = deleteGoal
+    listItem.appendChild(trashIcon)
     // Adding a function to the goal
-    listItem.onclick = editGoal(description)
+    listItem.onclick = markGoalAsComplete
     goalsList.append(listItem)
 }
 
 // Creating New Goals
 const addButton = document.querySelector('#addBtn')
-const titleInputBox = document.querySelector('#myTitleInput')
 const descriptionInputBox = document.querySelector('#myDescInput')
 
 
@@ -32,13 +43,12 @@ addButton.addEventListener('click', createNewGoal)
 
 function createNewGoal(event) {
     // Getting the value of the input field
-    const newTitle = titleInputBox.value;
     const newDescription = descriptionInputBox.value;
    
-    // If either the title or description is missing
+    // If either the description is missing
     // the user will be notfied with an alert
-    if (newTitle === "" || newDescription === "") {
-        alert("Please enter title or description")
+    if (newDescription === "") {
+        alert("Please enter a goal description")
         return
     }
 
@@ -46,7 +56,7 @@ function createNewGoal(event) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         // Gets the input data, converts into JSON, and sends into the server
-        body: JSON.stringify({ title: newTitle, description: newDescription })
+        body: JSON.stringify({ description: newDescription })
     })
         .then(res => res.json())
         .then(data => {
@@ -58,13 +68,36 @@ function createNewGoal(event) {
 
 
 
-function editGoal(description) {
-    console.log(description)
+function markGoalAsComplete(event) {
+    // console.log(event.target)
+    const currentTask = event.target;
+    const currentTaskId = Number(event.target.id)
+    // console.log(currentTaskId)
+
+    fetch(`http://localhost:8085/goals/${currentTaskId}/complete`, {
+        method: 'PATCH'
+    })
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(data => {
+            if (data.completed === true) {
+                currentTask.classList.add("checked")
+            }
+        })
+    })
 }
 
 
 
-// Mark Goals as Completed
-function markGoalAsCompleted() {
-    
+// Delete a goal
+function deleteGoal(event) {
+    // console.log(event.target)
+    const currentTask = event.target;
+    const currentTaskId = Number(event.target.id)
+    const parentEle = currentTask.parentElement;
+
+    fetch(`http://localhost:8085/goals/${currentTaskId}/`, {
+        method: 'DELETE'
+    })
+    parentEle.remove();
 }

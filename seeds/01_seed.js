@@ -38,6 +38,6 @@ exports.seed = async function(knex) {
   // Populate the Goals table
   await knex('goals').del()  
   await knex('goals').insert([
-    {title: 'running', description: 'run 3 laps around the park'}, {title: 'food', description: 'eat homemade food for a week'}, {title: 'possibility', description: 'try a new diet out'}, {title: 'nature', description: 'camp out in the woods for three nights'}
+    {description: 'run 3 laps around the park'}, {description: 'eat homemade food for a week'}, {description: 'try a new diet out'}, {description: 'camp out in the woods for three nights'}
   ]);
 };

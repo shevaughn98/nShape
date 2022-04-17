@@ -7,8 +7,8 @@ class Goal {
         return databaseResult.rows
     }
 
-    static async createGoal(title, description) {
-        const databaseResult = await pool.query(`INSERT into goals (title, description) values ($1, $2) returning *`, [title, description]);
+    static async createGoal(description) {
+        const databaseResult = await pool.query(`INSERT into goals (description) values ($1) returning *`, [description]);
 
         return databaseResult.rows[0];  
     }
@@ -19,8 +19,8 @@ class Goal {
         return databaseResult.rows[0]  
     }
 
-    static async updateGoal(id, description, title) {
-        await pool.query(`UPDATE goals SET description = $2, title = $3 WHERE goals_id = $1`, [id, description, title]);
+    static async updateGoal(id, description) {
+        await pool.query(`UPDATE goals SET description = $2 WHERE goals_id = $1`, [id, description]);
 
         const databaseResult = await pool.query(`SELECT * FROM goals WHERE goals_id = $1`, [id])
 
