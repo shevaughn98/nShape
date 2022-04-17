@@ -95,10 +95,16 @@ function displaySelectedWorkoutInfoArms(data) {
     if (armsListTracker !== 4) {
 
         const listItem = document.createElement('li');
+
+        // List Styling
         listItem.style.listStyleType = 'none';
+        listItem.style.border = "3px solid";
+        listItem.style.marginTop = "15px";
+        listItem.style.padding = "10px";
+        listItem.style.borderRadius = "10px";
         // Workout's Name
         const workoutHeading = document.createElement('h3');
-        workoutHeading.innerText = name;
+        workoutHeading.innerText = name.toUpperCase();
         // Reps
         const workoutReps = document.createElement('h4');
         workoutReps.innerText = `${reps} reps of ${repsrepetition}`
@@ -107,17 +113,11 @@ function displaySelectedWorkoutInfoArms(data) {
         workoutVideoLink.href = video;
         workoutVideoLink.target = "_blank"
         workoutVideoLink.innerText = `How to perform ${name}`
-        // Ruler
-        const horizontalRuler = document.createElement('hr')
-        horizontalRuler.style.marginTop = '10px';
-        horizontalRuler.style.border = '2px solid black';
-        horizontalRuler.style.borderRadius = '5px';
 
 
         listItem.appendChild(workoutHeading)
         listItem.appendChild(workoutReps)
         listItem.appendChild(workoutVideoLink)
-        listItem.appendChild(horizontalRuler)
 
         armModalContent.appendChild(listItem)
         armsListTracker += 1
@@ -157,10 +157,16 @@ function displaySelectedWorkoutInfoAbs(data) {
     if (absListTracker !== 4) {
 
         const listItem = document.createElement('li');
+
+        // List Styling
         listItem.style.listStyleType = 'none';
+        listItem.style.border = "3px solid";
+        listItem.style.marginTop = "15px";
+        listItem.style.padding = "10px";
+        listItem.style.borderRadius = "10px";
         // Workout's Name
         const workoutHeading = document.createElement('h3');
-        workoutHeading.innerText = name;
+        workoutHeading.innerText = name.toUpperCase()
         // Reps
         const workoutReps = document.createElement('h4');
         workoutReps.innerText = `${reps} reps of ${repsrepetition}`
@@ -169,17 +175,11 @@ function displaySelectedWorkoutInfoAbs(data) {
         workoutVideoLink.href = video;
         workoutVideoLink.target = "_blank"
         workoutVideoLink.innerText = `How to perform ${name}`
-        // Ruler
-        const horizontalRuler = document.createElement('hr')
-        horizontalRuler.style.marginTop = '10px';
-        horizontalRuler.style.border = '2px solid black';
-        horizontalRuler.style.borderRadius = '5px';
 
 
         listItem.appendChild(workoutHeading)
         listItem.appendChild(workoutReps)
         listItem.appendChild(workoutVideoLink)
-        listItem.appendChild(horizontalRuler)
 
         absModalContent.appendChild(listItem)
         absListTracker += 1
@@ -218,10 +218,15 @@ function displaySelectedWorkoutInfoFullBody(data) {
     if (fullBodyListTracker !== 4) {
 
         const listItem = document.createElement('li');
+        // List Styling
         listItem.style.listStyleType = 'none';
+        listItem.style.border = "3px solid";
+        listItem.style.marginTop = "15px";
+        listItem.style.padding = "10px";
+        listItem.style.borderRadius = "10px";
         // Workout's Name
         const workoutHeading = document.createElement('h3');
-        workoutHeading.innerText = name;
+        workoutHeading.innerText = name.toUpperCase()
         // Reps
         const workoutReps = document.createElement('h4');
         workoutReps.innerText = `${reps} reps of ${repsrepetition}`
@@ -230,17 +235,11 @@ function displaySelectedWorkoutInfoFullBody(data) {
         workoutVideoLink.href = video;
         workoutVideoLink.target = "_blank"
         workoutVideoLink.innerText = `How to perform ${name}`
-        // Ruler
-        const horizontalRuler = document.createElement('hr')
-        horizontalRuler.style.marginTop = '10px';
-        horizontalRuler.style.border = '2px solid black';
-        horizontalRuler.style.borderRadius = '5px';
 
 
         listItem.appendChild(workoutHeading)
         listItem.appendChild(workoutReps)
         listItem.appendChild(workoutVideoLink)
-        listItem.appendChild(horizontalRuler)
 
         fullBodyModalContent.appendChild(listItem)
         fullBodyListTracker += 1
@@ -259,52 +258,51 @@ function displaySelectedWorkoutInfoFullBody(data) {
 function selectedWorkoutLegs(type) {
 
     if (legsNameTracker !== 1) {
-    // Workout Heading
-    const selectedWorkout = document.createElement('h1');
-    selectedWorkout.style.textAlign = 'center';
-    // Horizontal Rouler
-    const horizontalRuler = document.createElement('hr')
+        // Workout Heading
+        const selectedWorkout = document.createElement('h1');
+        selectedWorkout.style.textAlign = 'center';
+        // Horizontal Rouler
+        const horizontalRuler = document.createElement('hr')
 
-    selectedWorkout.innerText = type;
-    legsModalContent.append(selectedWorkout);
-    legsModalContent.appendChild(horizontalRuler)
-    legsNameTracker += 1
+        selectedWorkout.innerText = type;
+        legsModalContent.append(selectedWorkout);
+        legsModalContent.appendChild(horizontalRuler)
+        legsNameTracker += 1
     } else {
         return
     }
 }
 
 function displaySelectedWorkoutInfoLegs(data) {
-    const {name, reps, repsrepetition, video} = data;
+    const { name, reps, repsrepetition, video } = data;
     if (legsListTracker !== 4) {
 
-    const listItem = document.createElement('li');
-    listItem.style.listStyleType = 'none';
-    // Workout's Name
-    const workoutHeading = document.createElement('h3');
-    workoutHeading.innerText = name;
-    // Reps
-    const workoutReps = document.createElement('h4');
-    workoutReps.innerText = `${reps} reps of ${repsrepetition}`
-    // Video
-    const workoutVideoLink = document.createElement('a');
-    workoutVideoLink.href = video;
-    workoutVideoLink.target = "_blank"
-    workoutVideoLink.innerText = `How to perform ${name}`
-    // Ruler
-    const horizontalRuler = document.createElement('hr')
-    horizontalRuler.style.marginTop = '10px';
-    horizontalRuler.style.border = '2px solid black';
-    horizontalRuler.style.borderRadius = '5px';
+        const listItem = document.createElement('li');
+        // List Styling
+        listItem.style.listStyleType = 'none';
+        listItem.style.border = "3px solid";
+        listItem.style.marginTop = "15px";
+        listItem.style.padding = "10px";
+        listItem.style.borderRadius = "10px";
+        // Workout's Name
+        const workoutHeading = document.createElement('h3');
+        workoutHeading.innerText = name.toUpperCase()
+        // Reps
+        const workoutReps = document.createElement('h4');
+        workoutReps.innerText = `${reps} reps of ${repsrepetition}`
+        // Video
+        const workoutVideoLink = document.createElement('a');
+        workoutVideoLink.href = video;
+        workoutVideoLink.target = "_blank"
+        workoutVideoLink.innerText = `How to perform ${name}`
 
 
-    listItem.appendChild(workoutHeading)
-    listItem.appendChild(workoutReps)
-    listItem.appendChild(workoutVideoLink)
-    listItem.appendChild(horizontalRuler)
+        listItem.appendChild(workoutHeading)
+        listItem.appendChild(workoutReps)
+        listItem.appendChild(workoutVideoLink)
 
-    legsModalContent.appendChild(listItem)
-    legsListTracker += 1
+        legsModalContent.appendChild(listItem)
+        legsListTracker += 1
     } else {
         return
     }
