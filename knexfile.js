@@ -8,9 +8,9 @@ module.exports = {
   development: {
     client: 'postgresql',
     connection: {
-      database: 'nShape',
-      user:     'example',
-      password: 'code'
+      database: 'nshapeApp',
+      user:     'anneciebaptiste',
+      password: ''
     }
   },
 
