@@ -6,107 +6,91 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>about-mission-page</title>
-  <link href="/front-end/styles/about.css" rel="stylesheet">
+  <link rel="stylesheet" href="/front-end/styles/about.css">
 </head>
 
 <body>
-  <div class="left">
+  <nav class="nav-bar">
+    <img class="logo" src="/front-end/images/Nshape.png" height="100">
     <ul class="topnav">
-      <a href="./users.html">Home</a>
-      <a href="./signup.html">SignIn</a>
+      <a href="./home.html">Home</a>
+      <a href="./signup.html">Sign in</a>
     </ul>
-  </div>
+  </nav>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about-mission-page</title>
-    <link rel="stylesheet" href="/front-end/styles/about.css">
-  </head>
+  <section class="section2" id="AboutUs">
 
-  <body>
-    <nav class="nav-bar">
-      <img class="logo" src="/front-end/images/Nshape.png" height="100">
-      <ul class="topnav">
-        <a href="./home.html">Home</a>
-        <a href="./signup.html">Sign in</a>
-      </ul>
-    </nav>
+    <span class="title">About Us</span>
+    <h3> We're an online gym subscription providing users with home workouts.Being physically active helps you
+      sleep better, feel better and reduce your risk of obesity, heart disease, type 2 diabetes, and some
+      cancers.
+      According to the CDC ,Men and women who engage in regular physical activity experience statistically
+      significant and clinically important reductions in the risk of dying from coronary heart disease, the
+      leading cause of death in the U.S. Stay active from the comfort of your home.
+    </h3>
+    <br>
+    <a href="#OurMission" class="btn1">Our Misssion</a>
+    <!-- <a href="" class="btn2">Learn More</a> -->
+  </section>
 
-    <section class="section2" id="AboutUs">
+  <section class="section3" id="OurMission">
+    <span class="title">Our Mission</span>
+    <h3>Physical inactivity in the U.S. is staggering. According to Healthy People 2020, approximately 36
+      percent
+      of adults do not engage in any leisure-time physical activity.The purpose of this fitness app is to
+      provide
+      users with instructions and examples of one or more types of exercise, physical activity, nutritional
+      programs, and other fitness topics to help them stay fit and lead a more active lifestyle.
+    </h3>
+  </section>
 
-      <span class="title">About Us</span>
-      <h3> We're an online gym subscription providing users with home workouts.Being physically active helps you
-        sleep better, feel better and reduce your risk of obesity, heart disease, type 2 diabetes, and some
-        cancers.
-        According to the CDC ,Men and women who engage in regular physical activity experience statistically
-        significant and clinically important reductions in the risk of dying from coronary heart disease, the
-        leading cause of death in the U.S. Stay active from the comfort of your home.
-      </h3>
-      <br>
-      <a href="#OurMission" class="btn1">Our Misssion</a>
-      <!-- <a href="" class="btn2">Learn More</a> -->
-    </section>
+  <footer class="footer" id="footer">
+    <span class="col">
+      <h3 class="col-title">Extra Resources</h3>
+      <nav class="col-list">
+        <ul>
+          <li><a href="#">GymPricing</a></li>
+          <li><a href="#">Health & Fitness Store</a></li>
+        </ul>
+      </nav>
+    </span>
 
-    <section class="section3" id="OurMission">
-      <span class="title">Our Mission</span>
-      <h3>Physical inactivity in the U.S. is staggering. According to Healthy People 2020, approximately 36
-        percent
-        of adults do not engage in any leisure-time physical activity.The purpose of this fitness app is to
-        provide
-        users with instructions and examples of one or more types of exercise, physical activity, nutritional
-        programs, and other fitness topics to help them stay fit and lead a more active lifestyle.
-      </h3>
-    </section>
+    <span class="col">
+      <h3 class="col-title">Developers</h3>
+      <nav class="col-list">
+        <ul>
+          <li><a href="#">Shevaughn Legall</a></li>
+          <li><a href="#">Jason Padilla</a></li>
+          <li><a href="#">Annecie Jean Baptiste</a></li>
+        </ul>
+      </nav>
+    </span>
 
-    <footer class="footer" id="footer">
-      <span class="col">
-        <h3 class="col-title">Extra Resources</h3>
-        <nav class="col-list">
-          <ul>
-            <li><a href="#">GymPricing</a></li>
-            <li><a href="#">Health & Fitness Store</a></li>
-          </ul>
-        </nav>
-      </span>
+    <span class="col">
+      <h3 class="col-title">Company</h3>
+      <nav class="col-list">
+        <ul>
+          <!-- <li><a href="#">About Us</a></li> -->
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </nav>
+    </span>
 
-      <span class="col">
-        <h3 class="col-title">Developers</h3>
-        <nav class="col-list">
-          <ul>
-            <li><a href="#">Shevaughn Legall</a></li>
-            <li><a href="#">Jason Padilla</a></li>
-            <li><a href="#">Annecie Jean Baptiste</a></li>
-          </ul>
-        </nav>
-      </span>
+    <span class="col">
+      <div class="subscribe-form-holder">
+        <h3 class="form-title">Subscribe to our email newsletter</h3>
+        <form action="#" onsubmit="false" class="subscribe-form">
+          <input type="email" name="email" id="email" class="email subscribe-input" autocomplete="off"
+            placeholder="Your email">
+          <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+      </div>
+    </span>
 
-      <span class="col">
-        <h3 class="col-title">Company</h3>
-        <nav class="col-list">
-          <ul>
-            <!-- <li><a href="#">About Us</a></li> -->
-            <li><a href="#">Sustainability</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy</a></li>
-          </ul>
-        </nav>
-      </span>
-
-      <span class="col">
-        <div class="subscribe-form-holder">
-          <h3 class="form-title">Subscribe to our email newsletter</h3>
-          <form action="#" onsubmit="false" class="subscribe-form">
-            <input type="email" name="email" id="email" class="email subscribe-input" autocomplete="off"
-              placeholder="Your email">
-            <button type="submit" class="subscribe-btn">Subscribe</button>
-          </form>
-        </div>
-      </span>
-
-    </footer>
-    <script src="/front-end/about.js"></script>
-  </body>
+  </footer>
+  <script src="/front-end/about.js"></script>
+</body>
 
 </html>

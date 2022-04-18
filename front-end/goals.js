@@ -12,7 +12,6 @@ const goalsList = document.querySelector('#myUL')
 function renderListItem(data) {
     // Destructing the api data into individual varibales 
     const { goals_id, description, completed } = data;
-    console.log(description)
 
     // Rendering Goal to the website
     const listItem = document.createElement('li');
@@ -29,6 +28,13 @@ function renderListItem(data) {
     trashIcon.id = goals_id;
     trashIcon.onclick = deleteGoal
     listItem.appendChild(trashIcon)
+    // Pencil (Edit Icon)
+    const editIcon = document.createElement('i');
+    editIcon.setAttribute("class", "fa-solid fa-pencil")
+    editIcon.style.marginLeft = "15px";
+    editIcon.id = goals_id;
+    editIcon.onclick = editGoal
+    listItem.appendChild(editIcon)
     // Adding a function to the goal
     listItem.onclick = markGoalAsComplete
     goalsList.append(listItem)
@@ -44,7 +50,7 @@ addButton.addEventListener('click', createNewGoal)
 function createNewGoal(event) {
     // Getting the value of the input field
     const newDescription = descriptionInputBox.value;
-   
+
     // If either the description is missing
     // the user will be notfied with an alert
     if (newDescription === "") {
@@ -64,10 +70,7 @@ function createNewGoal(event) {
         })
 }
 
-// Editing Goals
-
-
-
+// Marking Goals as Completed
 function markGoalAsComplete(event) {
     // console.log(event.target)
     const currentTask = event.target;
@@ -77,14 +80,14 @@ function markGoalAsComplete(event) {
     fetch(`http://localhost:8085/goals/${currentTaskId}/complete`, {
         method: 'PATCH'
     })
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(data => {
-            if (data.completed === true) {
-                currentTask.classList.add("checked")
-            }
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(data => {
+                if (data.completed === true) {
+                    currentTask.classList.add("checked")
+                }
+            })
         })
-    })
 }
 
 
@@ -101,3 +104,24 @@ function deleteGoal(event) {
     })
     parentEle.remove();
 }
+
+// Edit a goal
+function editGoal(event) {
+    const currentTask = event.target;
+    const currentTaskId = Number(event.target.id)
+    const parentEle = currentTask.parentElement;
+
+    // Pops a windows' icon to edit the goal
+    const editPrompt = prompt(`Update Task Description`, `${parentEle.innerText}`)
+
+    fetch(`http://localhost:8085/goals/${currentTaskId}/`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({description: editPrompt})
+    })
+    // Update current description with new inputted description
+    parentEle.innerText = editPrompt
+
+}
+// 
+// 
