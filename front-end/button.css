@@ -145,3 +145,27 @@ a {
   background-color: transparent;
   border: 1px red solid;
 }
+.nav-bar{
+  display: flex;
+  }
+  
+  .topnav {
+      width: 100%;
+      overflow: hidden;
+      background-color: #060606;
+      margin: 0;
+    }
+    
+    .topnav a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      margin-top: 20px;
+      font-size: 17px;
+    }
+    
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
