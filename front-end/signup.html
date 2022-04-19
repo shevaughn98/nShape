@@ -20,13 +20,24 @@
 
         <form id="form-1">
         <div class="text-center">
-            <h3>Create an account</h3> <span class="abt">Already have an account? <a href="#">Sign In</a></span>
+            <h3>Create an account</h3> <span class="abt">Already have an account? <a href="./users.html">Sign In</a></span>
         </div>
         
         <div class="form mt-3">
-            <div class="inputbox"> <input type="text" class="form-control" placeholder="Username" required> </div>
-            <div class="input-group inputbox"> <input type="text" placeholder="First name" class="form-control"> <input type="text" placeholder="Last name" class="form-control" required> </div>
-            <div class="inputbox"> <input type="email" id="email" placeholder="Email"> </div>
+            <div class="inputbox"> <input type="text" class="form-control" placeholder="Username" required> 
+            </div>
+            
+            <div 
+            class="input-group inputbox"> <input type="text" placeholder="First name" class="form-control"> <input type="text" placeholder="Last name" class="form-control" required> 
+            </div>
+
+            <div class="inputbox"> <input type="email" id="email" placeholder="Email" class="form-control"> 
+            </div>
+
+            <div class="inputbox"> 
+                <input type="password" id="pass" name="password" minlength="8" required class="form-control">
+                <label for="pass">Password (8 characters minimum):</label>
+            </div>
         </div>
        
         <div class="mt-4 proceed"> 
